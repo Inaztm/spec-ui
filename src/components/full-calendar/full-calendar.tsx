@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
-import { Component, Host, h, Prop, State, Method, Element, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, State, Method, Element, Event, EventEmitter, Watch } from '@stencil/core';
 
 const baseOptions: CalendarOptions = {
   headerToolbar: {
@@ -35,6 +35,11 @@ export class FullCalendar {
 
   @Prop() value: Array<any> = []
 
+  @Watch('value')
+  watchPropValue() {
+    this.updateModel()
+  }
+
   @Prop() options: CalendarOptions = {}
 
   @Prop() sticky: boolean = false;
@@ -47,6 +52,7 @@ export class FullCalendar {
 
   @Method()
   async updateModel() {
+    if (!this.calendar) return
     this.calendar.setOption('events', this.value)
   }
 
