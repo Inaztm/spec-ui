@@ -1,0 +1,19 @@
+:host {
+  --tte-bg-color: transparent;
+  --tte-border-color: #50546c;
+  --tte-min-height: 100px;
+  --tte-link-color: #36a3f7;
+}
+
+.link {
+  color: var(--tte-link-color);
+  cursor: pointer;
+}
+
+.tiptap-editor .ProseMirror {
+  background-color: var(--tte-bg-color);
+  border: 1px solid var(--tte-border-color);
+  border-radius: 3px;
+  padding: 0 1em;
+  min-height: var(--tte-min-height);
+}

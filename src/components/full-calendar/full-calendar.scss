@@ -1,0 +1,50 @@
+@import "~@fullcalendar/common/main.css";
+@import "~@fullcalendar/daygrid/main.css";
+@import "~@fullcalendar/list/main.css";
+@import "~@fullcalendar/timegrid/main.css";
+// @import "../../assets/styles/kt/init";
+@import "../../assets/styles/kt/plugins.scss";
+@import "../../assets/styles/kt/style.scss";
+
+:host {
+    --pfc-bg-color: transparent;
+    --pfc-border-color: transparent;
+    --pfc-title-loffset: 0;
+    --pfc-title-roffset: 0;
+    --pfc-border: 1px solid var(--pfc-border-color);
+    --pfc-top: 0;
+    --pfc-th-top: 0;
+    --pfc-pined-bg-color: transparent;
+    --pfc-pined-space: 0.5em;
+    --pfc-toolbar-chunck-vertical: center;
+    --pfc-header-toolbar-zindex: 3;
+}
+
+.full-calendar {
+    background-color: var(--pfc-bg-color);
+    border: var(--pfc-border);
+
+    &.sticky-header {
+        .fc-header-toolbar {
+            position: sticky;
+            top: var(--pfc-top);
+            z-index: var(--pfc-header-toolbar-zindex);
+            margin-bottom: 0.5em;
+            background-color: var(--pfc-pined-bg-color); 
+            padding: var(--pfc-pined-space);
+        }
+        .fc-scrollgrid-section-header.fc-scrollgrid-section-sticky > * {
+            top: var(--pfc-th-top);
+        }
+    }
+
+    .fc-toolbar-title {
+        margin-left: var(--pfc-title-loffset);
+        margin-right: var(--pfc-title-roffset);
+    }
+
+    .fc-toolbar-chunk {
+        display: inline-flex;
+        align-items: var(--pfc-toolbar-chunck-vertical);
+    }
+}

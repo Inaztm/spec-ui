@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/spec-ui.esm.js"></script>
+    <script nomodule src="/build/spec-ui.js"></script>
+  </head>
+  <body>
+    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component><br />
+    <spec-tiptap-editor value="Test"></spec-tiptap-editor><br />
+    <spec-full-calendar class="js-full-calendar"></spec-full-calendar>
+  </body>
+  <script>
+    const value = [
+      {
+        id: 'a',
+        title: 'my event',
+        start: '2022-08-10T10:30:00',
+        end: '2022-08-10T11:30:00',
+      },
+      {
+        id: 'a',
+        title: 'my event 2',
+        start: '2022-08-10T10:30:00',
+        end: '2022-08-10T11:20:00',
+      },
+      {
+        id: 'a',
+        title: 'my event 3',
+        start: '2022-08-10T10:30:00',
+        end: '2022-08-10T11:20:00',
+      }
+    ]
+    setTimeout(() => {
+      document.querySelector('.js-full-calendar').value = value
+      document.querySelector('.js-full-calendar').updateModel()
+    }, 1000)
+  </script>
+</html>
