@@ -10,6 +10,10 @@ body {
 
 // Base
 .fc {
+    --fc-event-border-color: var(--kt-primary);
+    --fc-event-bg-color: var(--kt-primary);
+    --fc-event-text-color: var(--kt-primary-inverse);
+    
     // Border color
     --fc-border-color: #{var(--kt-gray-200)};
     --fc-page-bg-color: #{$white};

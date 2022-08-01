@@ -33,6 +33,8 @@ const baseOptions: CalendarOptions = {
 })
 export class FullCalendar {
 
+  @Prop() theme: string = 'light'
+
   @Prop() value: Array<any> = []
 
   @Watch('value')
@@ -87,7 +89,7 @@ export class FullCalendar {
     };
     return (
       <Host>
-        <div class={classes}></div>
+        <div data-theme={this.theme} class={classes}></div>
       </Host>
     );
   }

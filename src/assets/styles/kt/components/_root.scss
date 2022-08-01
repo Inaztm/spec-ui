@@ -3,6 +3,7 @@
 //
 
 :root,
+:host,
 [data-theme="light"] {
     // Breakpoints
     @each $breakpoint, $value in $grid-breakpoints {
@@ -428,6 +429,7 @@
     --kt-ribbon-clip-bg: #{$ribbon-clip-bg}; 
 }
 
+:host[data-theme="dark"],
 [data-theme="dark"] {
     // Bootstrap muted color
     --kt-text-muted: #{$text-muted-dark};

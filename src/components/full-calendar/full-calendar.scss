@@ -2,9 +2,10 @@
 @import "~@fullcalendar/daygrid/main.css";
 @import "~@fullcalendar/list/main.css";
 @import "~@fullcalendar/timegrid/main.css";
-// @import "../../assets/styles/kt/init";
-@import "../../assets/styles/kt/plugins.scss";
-@import "../../assets/styles/kt/style.scss";
+@import "../../assets/styles/kt/init";
+@import "../../assets/styles/kt/vendors/plugins/fullcalendar";
+@import "../../assets/styles/kt/style-lite.scss";
+@import "../../assets/styles/gg.scss";
 
 :host {
     --pfc-bg-color: transparent;
@@ -18,11 +19,14 @@
     --pfc-pined-space: 0.5em;
     --pfc-toolbar-chunck-vertical: center;
     --pfc-header-toolbar-zindex: 3;
+
+    --pfc-page-bg-color: var(--pfc-bg-color);
 }
 
 .full-calendar {
+    --fc-page-bg-color: var(--pfc-page-bg-color);
+    --fc-border-color: var(--pfc-border-color);
     background-color: var(--pfc-bg-color);
-    border: var(--pfc-border);
 
     &.sticky-header {
         .fc-header-toolbar {
@@ -46,5 +50,22 @@
     .fc-toolbar-chunk {
         display: inline-flex;
         align-items: var(--pfc-toolbar-chunck-vertical);
+    }
+
+    .fc-prev-button,
+    .fc-next-button {
+        min-height: 40px;
+    }
+
+    .fc-icon-chevron-left {
+        @extend .gg-push-left;
+    }
+
+    .fc-icon-chevron-right {
+        @extend .gg-push-right;
+    }
+
+    .fc-icon-x {
+        @extend .gg-close;
     }
 }

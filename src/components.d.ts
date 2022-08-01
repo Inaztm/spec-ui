@@ -24,6 +24,7 @@ export namespace Components {
     interface SpecFullCalendar {
         "options": CalendarOptions;
         "sticky": boolean;
+        "theme": string;
         "updateModel": () => Promise<void>;
         "value": Array<any>;
     }
@@ -83,6 +84,7 @@ declare namespace LocalJSX {
         "onCreated"?: (event: SpecFullCalendarCustomEvent<any>) => void;
         "options"?: CalendarOptions;
         "sticky"?: boolean;
+        "theme"?: string;
         "value"?: Array<any>;
     }
     interface SpecTiptapEditor {

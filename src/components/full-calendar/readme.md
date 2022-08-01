@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                                                                                                                                                                               | Default |
-| --------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `options` | --        |             | `RawOptionsFromRefiners<Required<BaseOptionRefiners>> & RefinedOptionsFromRefiners<Required<CalendarListenerRefiners>> & RawOptionsFromRefiners<Required<CalendarOptionRefiners>>` | `{}`    |
-| `sticky`  | `sticky`  |             | `boolean`                                                                                                                                                                          | `false` |
-| `value`   | --        |             | `any[]`                                                                                                                                                                            | `[]`    |
+| Property  | Attribute | Description | Type                                                                                                                                                                               | Default   |
+| --------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `options` | --        |             | `RawOptionsFromRefiners<Required<BaseOptionRefiners>> & RefinedOptionsFromRefiners<Required<CalendarListenerRefiners>> & RawOptionsFromRefiners<Required<CalendarOptionRefiners>>` | `{}`      |
+| `sticky`  | `sticky`  |             | `boolean`                                                                                                                                                                          | `false`   |
+| `theme`   | `theme`   |             | `string`                                                                                                                                                                           | `'light'` |
+| `value`   | --        |             | `any[]`                                                                                                                                                                            | `[]`      |
 
 
 ## Events
