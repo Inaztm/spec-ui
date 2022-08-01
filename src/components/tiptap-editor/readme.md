@@ -14,12 +14,12 @@
 
 ## Events
 
-| Event          | Description | Type               |
-| -------------- | ----------- | ------------------ |
-| `editrBlur`    |             | `CustomEvent<any>` |
-| `editrChange`  |             | `CustomEvent<any>` |
-| `editrCreated` |             | `CustomEvent<any>` |
-| `editrFocus`   |             | `CustomEvent<any>` |
+| Event           | Description | Type               |
+| --------------- | ----------- | ------------------ |
+| `editorBlur`    |             | `CustomEvent<any>` |
+| `editorChange`  |             | `CustomEvent<any>` |
+| `editorCreated` |             | `CustomEvent<any>` |
+| `editorFocus`   |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

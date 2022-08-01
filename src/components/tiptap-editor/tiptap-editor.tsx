@@ -16,10 +16,10 @@ export class TiptapEditor {
 
   @Element() el: HTMLElement
 
-  @Event() editrCreated: EventEmitter<any>
-  @Event() editrChange: EventEmitter<any>
-  @Event() editrFocus: EventEmitter<any>
-  @Event() editrBlur: EventEmitter<any>
+  @Event() editorCreated: EventEmitter<any>
+  @Event() editorChange: EventEmitter<any>
+  @Event() editorFocus: EventEmitter<any>
+  @Event() editorBlur: EventEmitter<any>
 
   protected setupEditor() {
     const attachEl = this.el.shadowRoot.querySelector('.tiptap-editor') as HTMLElement
@@ -79,19 +79,19 @@ export class TiptapEditor {
   }
 
   _onCreated(editor: Editor | null) {
-    this.editrCreated.emit(editor)
+    this.editorCreated.emit(editor)
   }
 
   _onChange(value: any) {
-    this.editrChange.emit(value)
+    this.editorChange.emit(value)
   }
 
   _onFocus() {
-    this.editrFocus.emit()
+    this.editorFocus.emit()
   }
 
   _onBlur() {
-    this.editrBlur.emit()
+    this.editorBlur.emit()
   }
 
 }

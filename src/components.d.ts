@@ -86,10 +86,10 @@ declare namespace LocalJSX {
         "value"?: Array<any>;
     }
     interface SpecTiptapEditor {
-        "onEditrBlur"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
-        "onEditrChange"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
-        "onEditrCreated"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
-        "onEditrFocus"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
+        "onEditorBlur"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
+        "onEditorChange"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
+        "onEditorCreated"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
+        "onEditorFocus"?: (event: SpecTiptapEditorCustomEvent<any>) => void;
         "value"?: string;
     }
     interface IntrinsicElements {
