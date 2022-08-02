@@ -21,6 +21,8 @@
     --pfc-header-toolbar-zindex: 3;
 
     --pfc-page-bg-color: var(--pfc-bg-color);
+
+    --pfc-popover-z-index: 9999;
 }
 
 .full-calendar {
@@ -67,5 +69,9 @@
 
     .fc-icon-x {
         @extend .gg-close;
+    }
+
+    .fc-popover {
+        z-index: var(--pfc-popover-z-index);
     }
 }
