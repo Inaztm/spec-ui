@@ -49,6 +49,11 @@
         margin-right: var(--pfc-title-roffset);
     }
 
+    .fc-toolbar-title,
+    .fc-col-header-cell {
+        text-transform: capitalize;
+    }
+
     .fc-toolbar-chunk {
         display: inline-flex;
         align-items: var(--pfc-toolbar-chunck-vertical);
