@@ -51,6 +51,7 @@ export class FullCalendar {
   @Element() el: HTMLElement
 
   @Event() created: EventEmitter<any>
+  @Event() eventDblClick: EventEmitter<any>
 
   @Method()
   async updateModel() {
@@ -67,6 +68,15 @@ export class FullCalendar {
       ...baseOptions,
       events: this.value,
       ...this.options,
+      eventDidMount: (eventInfo) => {
+        if (this.options.eventDidMount) {
+          this.options.eventDidMount(eventInfo)
+        }
+        // Set the dbclick event
+        eventInfo.el.ondblclick = () => {
+          this._eventDblClick(eventInfo)
+        };
+      },
     } as CalendarOptions;
     console.log({ calendarOptions })
     console.log('calendarEl', attachEl)
@@ -96,6 +106,10 @@ export class FullCalendar {
 
   _onCreated(model: Calendar) {
     this.created.emit(model)
+  }
+
+  _eventDblClick(e: any) {
+    this.eventDblClick.emit(e)
   }
 
 }

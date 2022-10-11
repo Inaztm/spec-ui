@@ -17,9 +17,10 @@
 
 ## Events
 
-| Event     | Description | Type               |
-| --------- | ----------- | ------------------ |
-| `created` |             | `CustomEvent<any>` |
+| Event           | Description | Type               |
+| --------------- | ----------- | ------------------ |
+| `created`       |             | `CustomEvent<any>` |
+| `eventDblClick` |             | `CustomEvent<any>` |
 
 
 ## Methods

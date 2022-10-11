@@ -82,6 +82,7 @@ declare namespace LocalJSX {
     }
     interface SpecFullCalendar {
         "onCreated"?: (event: SpecFullCalendarCustomEvent<any>) => void;
+        "onEventDblClick"?: (event: SpecFullCalendarCustomEvent<any>) => void;
         "options"?: CalendarOptions;
         "sticky"?: boolean;
         "theme"?: string;
